@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
-import { IconTriangle, IconCircle, IconColumns1 } from "@tabler/icons-react";
 import Shape from "../Shape";
 const Cards = () => {
   const [prev, setPrev] = useState(-1);
@@ -10,15 +9,86 @@ const Cards = () => {
   const [startTimer, setStartTimer] = useState(false);
   const [items, setItems] = useState(
     [
-      { id: 1, img: <IconTriangle size={150} color="white" />, stat: "" },
-      { id: 1, img: <IconTriangle size={150} color="white" />, stat: "" },
-      { id: 2, img: <IconCircle size={150} color="white" />, stat: "" },
-      { id: 2, img: <IconCircle size={150} color="white" />, stat: "" },
-      { id: 3, img: <IconColumns1 size={150} color="white" />, stat: "" },
-      { id: 3, img: <IconColumns1 size={150} color="white" />, stat: "" },
-    ].sort(() => Math.random() * 0.8)
+      {
+        id: 1,
+        img: (
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="40" r="30" />
+          </svg>
+        ),
+        stat: "",
+      },
+      {
+        id: 1,
+        img: (
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="40" r="30" />
+          </svg>
+        ),
+        stat: "",
+      },
+      {
+        id: 2,
+        img: (
+          <svg
+            viewBox="0 0 220 100"
+            xmlns="http://www.w3.org/2000/svg"
+            style={{
+              marginRight: 50,
+            }}
+          >
+            <rect x="120" width="100" height="100" rx="15" />
+          </svg>
+        ),
+        stat: "",
+      },
+      {
+        id: 2,
+        img: (
+          <svg
+            viewBox="0 0 220 100"
+            xmlns="http://www.w3.org/2000/svg"
+            style={{
+              marginRight: 50,
+            }}
+          >
+            <rect x="120" width="100" height="100" rx="15" />
+          </svg>
+        ),
+        stat: "",
+      },
+      {
+        id: 3,
+        img: (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="50%"
+            height="50%"
+            viewBox="0 0 100 100"
+          >
+            <polygon points="50 15, 100 100, 0 100" />
+          </svg>
+        ),
+        stat: "",
+      },
+      {
+        id: 3,
+        img: (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="50%"
+            height="50%"
+            viewBox="0 0 100 100"
+          >
+            <polygon points="50 15, 100 100, 0 100" />
+          </svg>
+        ),
+        stat: "",
+      },
+    ].sort(() => Math.floor(Math.random() * 360))
   );
 
+  console.log(items);
   useEffect(() => {
     let timer;
     if (startTimer) {

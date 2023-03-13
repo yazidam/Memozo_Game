@@ -63,3 +63,8 @@ h1 {
 .card.wrong {
   background-color: #fd245a;
 }
+
+svg {
+  fill: white;
+  margin-top: 50;
+}
