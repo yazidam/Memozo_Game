@@ -85,10 +85,9 @@ const Cards = () => {
         ),
         stat: "",
       },
-    ].sort(() => Math.floor(Math.random() * 360))
+    ].sort(() => Math.random() - 0.5)
   );
 
-  console.log(items);
   useEffect(() => {
     let timer;
     if (startTimer) {
